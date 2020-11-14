@@ -1,0 +1,21 @@
+.pagination {
+  margin-bottom: 0;
+
+  .page-item {
+    &:not(:last-child) {
+      margin-right: 4px;
+    }
+  }
+
+  .page-link {
+    color: $gray-800;
+    padding: 8px 16px;
+    border-radius: 4px;
+  }
+
+  @media (max-width: 767px) {
+    .page-link {
+      padding: 4px 10px;
+    }
+  }
+}

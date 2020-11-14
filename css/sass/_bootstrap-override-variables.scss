@@ -1,0 +1,48 @@
+// $container-max-widths: (
+//   sm: 540px,
+//   md: 720px,
+//   lg: 960px,
+//   xl: 1200px
+// );
+
+$headings-line-height: 1.5;
+$primary: #002e56;
+$secondary: #2876eb;
+
+$spacers: (
+  6: 6px,
+  10: 10px,
+  12: 12px,
+  14: 14px,
+  20: 20px,
+  30: 30px,
+  35: 35px,
+  40: 40px,
+  50: 50px,
+  60: 60px,
+  70: 70px,
+  80: 80px,
+  90: 90px,
+  100: 100px,
+  120: 120px,
+);
+
+$font-size-base: 0.875rem;
+
+// Navbar
+$navbar-padding-y: 0;
+$navbar-padding-x: 0;
+
+// Carousel
+$carousel-control-width: 10%;
+
+// Breadcrumbs
+// $breadcrumb-padding-y: 1rem;
+$breadcrumb-padding-x: 0;
+$breadcrumb-margin-bottom: 0;
+$breadcrumb-bg: 0;
+// $breadcrumb-divider: quote("/");
+$breadcrumb-border-radius: 0;
+
+// form
+$input-btn-focus-box-shadow: unset;

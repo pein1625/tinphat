@@ -1,0 +1,45 @@
+.md-video {
+  &__body {
+    padding: 0;
+    position: relative;
+  }
+
+  &__close {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+    color: $white;
+    background-color: $black;
+    border: 2px solid $border-color;
+    border-radius: 50%;
+    box-shadow: 0 1px 3px rgba(#000, 0.3);
+
+    &::before,
+    &::after {
+      content: '';
+      display: block;
+      width: 14px;
+      height: 2px;
+      background-color: $white;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotateZ(45deg);
+    }
+
+    &::after {
+      transform: translate(-50%, -50%) rotateZ(-45deg);
+    }
+  }
+
+  @media (min-width: 1199px) {
+    .modal-dialog {
+      max-width: 1020px;
+    }
+  }
+}

@@ -1,0 +1,205 @@
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: $primary;
+
+  &-item {
+    margin: 4px 0 8px;
+    position: relative;
+  }
+
+  &-link {
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    line-height: 40px;
+    padding: 0 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: inherit;
+
+    &:hover {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+
+  &-toggle {
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+
+    span {
+      display: inline-flex;
+      width: 24px;
+      height: 24px;
+      justify-content: center;
+      align-items: center;
+      border-radius: 12px;
+      transition: 0.3s;
+
+      &:hover {
+        background-color: rgba(#000, 0.1);
+      }
+    }
+
+    &.active span {
+      transform: rotate(90deg);
+    }
+  }
+
+  &-sub {
+    display: none;
+  }
+
+  &-sub &-link {
+    padding-left: 40px;
+  }
+
+  &-sub-2 &-link {
+    padding-left: 60px;
+  }
+
+  &-sub-3 &-link {
+    padding-left: 80px;
+  }
+
+  &-item:hover > &-link {
+    background-color: rgba($primary, 0.05);
+  }
+
+  &-root > &-item > &-link {
+    text-transform: uppercase;
+  }
+
+  @media (min-width: #{$navbar-breakpoint}px) {
+    // menu root
+    &-root {
+      display: flex;
+      padding: 0 30px;
+    }
+
+    &-root > &-item {
+      margin: 0;
+
+      &:not(:last-child) {
+        margin-right: 41px;
+        position: relative;
+
+        &::after {
+          content: "";
+          display: block;
+          height: 20px;
+          border-right: 1px solid #badcfb;
+          position: absolute;
+          top: 50%;
+          right: -20px;
+          transform: translateY(-50%);
+        }
+      }
+    }
+
+    &-root > &-item > &-link {
+      padding: 0 !important;
+      position: relative;
+      line-height: 50px;
+
+      &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        border-bottom: 2px solid $primary;
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+        transform: rotateY(90deg);
+        transition: 0.3s;
+      }
+
+      &.active::after {
+        transform: rotateY(0);
+      }
+    }
+
+    &-root > &-item:hover > &-link {
+      background: 0;
+
+      &::after {
+        transform: rotateY(0);
+      }
+    }
+
+    &-root > &-item > &-toggle {
+      display: none;
+    }
+
+    &-root &-sub {
+      min-width: 160px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      position: absolute;
+      z-index: 2;
+      top: -4px;
+      left: calc(100% + 4px);
+      border-radius: 4px;
+      transform-origin: 0 4px;
+      background-color: $white;
+
+      &::before {
+        content: "";
+        display: block;
+        width: 8px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 100%;
+      }
+
+      &-right {
+        left: auto;
+        right: calc(100% + 4px);
+        transform-origin: 100% 0;
+
+        &::before {
+          right: auto;
+          left: 100%;
+        }
+      }
+    }
+
+    &-root &-sub &-link {
+      padding-left: 20px;
+    }
+
+    &-root &-item-group > &-link {
+      padding-right: 40px;
+    }
+
+    &-root &-item-group:hover > &-sub {
+      display: block;
+      animation: menu-float-show 0.2s ease-out;
+    }
+
+    &-root > &-item-group > &-sub {
+      transform-origin: 0 0;
+      top: calc(100% + 4px);
+      left: 0;
+
+      &::before {
+        width: 100%;
+        height: 8px;
+        right: auto;
+        left: 0;
+        top: auto;
+        bottom: 100%;
+      }
+    }
+  }
+}

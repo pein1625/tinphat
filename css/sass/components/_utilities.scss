@@ -1,0 +1,56 @@
+.sharing {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  border-top: 1px solid $border-color;
+  border-bottom: 1px solid $border-color;
+
+  &__label {
+    color: #666;
+    margin-right: 20px;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    display: flex;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &:not(:last-child) {
+      margin-right: 16px;
+    }
+
+    .fa {
+      display: flex;
+      width: 35px;
+      height: 35px;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      color: $white;
+      background-color: $facebook;
+    }
+
+    .fa-twitter {
+      background-color: $twitter;
+    }
+
+    .fa-pinterest {
+      background-color: $pinterest;
+    }
+
+    .fa-envelope-o {
+      background-color: $dark;
+    }
+
+    .fa-print {
+      background-color: $light;
+      color: #000;
+    }
+  }
+}

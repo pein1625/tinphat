@@ -1,0 +1,277 @@
+.logo {
+  display: inline-flex;
+  margin: 4px 0;
+
+  img {
+    height: 100px;
+  }
+}
+
+.header {
+  position: relative;
+  z-index: 100;
+  background-color: $white;
+  padding-bottom: 50px;
+  box-shadow: $shadow;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  &__logo {
+    flex: 0 0 auto;
+  }
+
+  &__elements {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-left: auto;
+  }
+
+  &__widgets {
+    display: flex;
+    align-items: center;
+  }
+
+  &__btn {
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: $primary;
+    font-size: 14px;
+    white-space: nowrap;
+
+    & + & {
+      margin-left: 4px;
+    }
+
+    &:hover {
+      color: $primary;
+      text-decoration: none;
+    }
+
+    img {
+      max-height: 35px;
+      object-fit: contain;
+      object-position: 50% 50%;
+    }
+
+    span {
+      display: none;
+    }
+  }
+
+  @media (min-width: 768px) {
+    padding-bottom: 0;
+
+    &__widgets {
+      position: relative;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    box-shadow: unset;
+    background: 0;
+
+    &__inner {
+      background-color: $white;
+      box-shadow: $shadow;
+    }
+
+    &__logo {
+      padding: 10px 15px;
+      background-color: #dbf7ff;
+      margin: 0;
+
+      img {
+        height: 117px;
+      }
+    }
+
+    &__elements {
+      flex-direction: column;
+      flex-grow: 1;
+      align-self: stretch;
+      align-items: stretch;
+    }
+
+    &__widgets {
+      width: 100%;
+      flex-grow: 1;
+      justify-content: flex-end;
+      border-bottom: 1px solid $border-color;
+      padding: 0 30px;
+    }
+
+    &__btn {
+      width: auto;
+      margin-right: 30px;
+
+      span {
+        display: inline-block;
+        margin-left: 8px;
+      }
+
+      &--search {
+        display: none;
+      }
+    }
+  }
+}
+
+.navigation {
+  &__inner {
+    position: relative;
+  }
+}
+
+.search {
+  display: none;
+  width: 100%;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 10;
+  background-color: $white;
+  bottom: -50px;
+  left: 0;
+
+  .form-control {
+    height: 40px;
+    padding-left: 16px;
+    border: 1px solid $border-color;
+    border-right: 0;
+
+    &:focus {
+      border-color: $primary;
+    }
+  }
+
+  .input-group-text {
+    border: 1px solid $border-color;
+    border-left: 0;
+    padding: 0 12px;
+    background-color: $white;
+    transition: 0.3s;
+  }
+
+  .form-control:focus + .input-group-append .input-group-text {
+    border-color: $primary;
+  }
+
+  @media (min-width: 768px) {
+    width: auto;
+    top: 50%;
+    bottom: unset;
+    left: 0;
+    right: 133px;
+    transform: translateY(-50%);
+  }
+
+  @media (min-width: 1200px) {
+    display: block;
+    width: auto;
+    padding: 0;
+    flex: 1;
+    position: static;
+    left: auto;
+    transform: unset;
+    order: -5;
+    margin-right: 30px;
+  }
+}
+
+.hot-btn {
+  display: inline-flex;
+  height: 40px;
+  align-items: center;
+  padding: 0 8px;
+  border-radius: 4px;
+  background: $gradient;
+  color: $white;
+  position: absolute;
+  bottom: -45px;
+  left: 0;
+
+  &:hover {
+    color: $white;
+    text-decoration: none;
+  }
+
+  img {
+    height: 25px;
+    margin-right: 8px;
+  }
+
+  @media (min-width: 768px) {
+    position: static;
+    order: -2;
+    margin-right: 10px;
+  }
+
+  @media (min-width: 1200p) {
+    order: 0;
+  }
+}
+
+.acc-btns {
+  display: flex;
+  align-items: center;
+  border: 1px solid $primary;
+  border-radius: 4px;
+  padding: 0 8px;
+  height: 40px;
+  position: absolute;
+  right: 0;
+  bottom: -25px;
+  transform: translateY(50%);
+
+  &__btn {
+    display: inline-block;
+    font-size: 14px;
+    color: $primary;
+
+    &:hover {
+      color: $secondary;
+      text-decoration: none;
+    }
+
+    & + & {
+      margin-left: 15px;
+      position: relative;
+
+      &::before {
+        content: "";
+        height: 12px;
+        border-left: 1px solid $primary;
+        position: absolute;
+        top: 50%;
+        left: -8px;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
+  img {
+    height: 20px;
+    margin-right: 8px;
+  }
+
+  @media (min-width: 768px) {
+    position: static;
+    transform: translateY(0);
+    order: -1;
+    margin-right: 10px;
+  }
+
+  @media (min-width: 1200px) {
+    height: 34px;
+    order: 1;
+    margin-right: 0;
+  }
+}

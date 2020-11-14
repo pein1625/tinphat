@@ -1,0 +1,42 @@
+// import bootstrap override (config) variables
+@import "bootstrap-override-variables";
+
+// import from node modules
+@import "_bootstrap/bootstrap.scss";
+
+// import additional style
+@import "abstracts/variables";
+@import "abstracts/function";
+@import "abstracts/keyframes";
+@import "abstracts/mixin";
+@import "abstracts/typography";
+@import "abstracts/normalize";
+@import "abstracts/common";
+
+// utilities
+@import "utilities/text";
+@import "utilities/grid";
+@import "utilities/image";
+@import "utilities/title";
+@import "utilities/table";
+
+// components
+@import "components/button";
+@import "components/utilities";
+@import "components/form";
+@import "components/list";
+@import "components/widgets";
+@import "components/card";
+@import "components/menu";
+@import "components/navbar";
+@import "components/modal";
+@import "components/swiper";
+@import "components/section";
+@import "components/header";
+@import "components/footer";
+@import "components/pagination";
+@import "components/breadcrumb";
+@import "components/sticky";
+
+// pages (override or individual styles)
+@import "pages/index";

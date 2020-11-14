@@ -1,0 +1,77 @@
+.frame {
+  &-circle {
+    @include frame("circle");
+  }
+
+  &-square {
+    @include frame("square");
+  }
+
+  &-16by9 {
+    @include frame("rect", 56.25%);
+  }
+
+  &-1by2 {
+    @include frame("rect", 50%);
+  }
+
+  &-3by4 {
+    @include frame("rect", 133.33%);
+  }
+
+  &-4by3 {
+    @include frame("rect", 75%);
+  }
+
+  &-2by3 {
+    @include frame("rect", 150%);
+  }
+
+  &-3by2 {
+    @include frame("rect", 66.66%);
+  }
+
+  &-contain {
+    img {
+      object-fit: contain;
+    }
+  }
+
+  &-free {
+    img {
+      width: auto;
+      max-width: 100%;
+      height: auto;
+      max-height: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &-zoom {
+    @include frame("zoom");
+  }
+
+  &-shine {
+    @include frame("shine");
+  }
+}
+
+.img {
+  &-bg {
+    @include img("bg");
+  }
+
+  &-fit {
+    @include img("fit");
+  }
+
+  &-cover {
+    @include img("cover");
+  }
+
+  &-contain {
+    @include img("contain");
+  }
+}

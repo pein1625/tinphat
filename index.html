@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <title>Title</title>
+        <meta charset="utf-8" />
+        <meta name="description" content="Description" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="./css/libs.css" />
+        <link rel="stylesheet" href="./css/app.css" />
+        <script src="./js/libs.js" defer="defer"></script>
+        <script src="./js/app.js" defer="defer"></script>
+    </head>
+    <body>
+        <div id="fb-root"></div>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v7.0" nonce="QH5eTQTz"></script>
+        <div class="page">
+            <!-- header-->
+            <header class="header">
+                <div class="header__wrapper">
+                    <div class="container">
+                        <div class="header__inner"><a class="header__logo logo" href="./index.html"><img src="./images/logo.png" alt="" /></a>
+                            <div class="header__elements">
+                                <div class="header__widgets">
+                                    <form class="search">
+                                        <div class="input-group">
+                                            <input class="form-control" type="text" placeholder="Tìm kiếm bài giảng, khoá học, đề thi..." />
+                                            <div class="input-group-append">
+                                                <button class="input-group-text"><img src="./images/icon-search.png" alt="" /></button>
+                                            </div>
+                                        </div>
+                                    </form><a class="hot-btn" href="#!"><img src="./images/icon-ace-plus.png" alt="" />Tra cứu điểm thi IQ</a><a class="header__btn header__btn--search js-search-btn" href="#!"><img src="./images/icon-search.png" alt="" /></a><a class="header__btn" href="tel:+84 899 563 888"><img src="./images/icon-phone-o-lg.png" alt="" /><span>+84 899 563 888</span></a>
+                                    <nav class="acc-btns"><img src="./images/icon-user-circle.png" alt="" /><a class="acc-btns__btn" href="#!">Đăng kí</a><a class="acc-btns__btn" href="#!">Đăng nhập</a></nav>
+                                    <button class="navbar-toggle d-xl-none js-navbar-toggle ml-10"><span></span><span></span><span></span></button>
+                                </div>
+                                <section class="navbar js-navbar">
+                                    <div class="navbar__backdrop js-navbar-toggle"></div>
+                                    <div class="navbar__wrapper">
+                                        <div class="navbar__header"><a class="logo" href="./index.html"><img src="./images/logo.png" alt="" /></a>
+                                            <button class="navbar-toggle js-navbar-toggle ml-auto"><span></span><span></span><span></span></button>
+                                        </div>
+                                        <div class="navbar__body">
+                                            <ul class="menu menu-root">
+                                                <li class="menu-item"><a class="menu-link active" href="#!">GIỚI THIỆU</a>
+                                                </li>
+                                                <li class="menu-item menu-item-group"><a class="menu-link" href="#!">HỌC THỬ MIỄN PHÍ</a><span class="menu-toggle"><span><i class="fa fa-angle-right"></i></span></span>
+                                                    <ul class="menu menu-sub">
+                                                        <li class="menu-item"><a class="menu-link" href="#!">Dropdown</a>
+                                                        </li>
+                                                        <li class="menu-item"><a class="menu-link" href="#!">Dropdown</a>
+                                                        </li>
+                                                        <li class="menu-item"><a class="menu-link" href="#!">Dropdown</a>
+                                                        </li>
+                                                        <li class="menu-item menu-item-group"><a class="menu-link" href="#!">Dropdown</a><span class="menu-toggle"><span><i class="fa fa-angle-right"></i></span></span>
+                                                            <ul class="menu menu-sub menu-sub-2">
+                                                                <li class="menu-item"><a class="menu-link" href="#!">Dropdown</a>
+                                                                </li>
+                                                                <li class="menu-item"><a class="menu-link" href="#!">Dropdown</a>
+                                                                </li>
+                                                                <li class="menu-item"><a class="menu-link" href="#!">Dropdown</a>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="menu-item"><a class="menu-link" href="#!">THI ONLINE</a>
+                                                </li>
+                                                <li class="menu-item"><a class="menu-link" href="#!">NGOẠI NGỮ</a>
+                                                </li>
+                                                <li class="menu-item"><a class="menu-link" href="#!">DU HỌC</a>
+                                                </li>
+                                                <li class="menu-item"><a class="menu-link" href="#!">TUYỂN SINH</a>
+                                                </li>
+                                                <li class="menu-item"><a class="menu-link" href="#!">TIN TỨC</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <div class="page__content">
+                <!-- main content-->
+                <div class="container pt-20">
+                    <!-- Grid banner + menu-->
+                    <div class="banner-grid mb-30">
+                        <div class="banner-grid__col">
+                            <nav class="course-menu">
+                                <div class="course-menu__title">Các khoá học</div>
+                                <div class="course-menu__item"><a class="course-menu__link" href="#!">Khoá học bổ trợ</a>
+                                    <div class="course-menu__mega">
+                                        <button class="course-menu__close" type="button"></button>
+                                        <div class="course-menu__mega-inner">
+                                            <div class="course-menu__grid"><a class="course-menu__lesson" href="#!">
+                                                    <div class="course-menu__icon"><img src="./images/icon-math.png" alt=""></div>
+                                                    <div class="course-menu__name">Toán học</div>
+                                                </a><a class="course-menu__lesson" href="#!">
+                                                    <div class="course-menu__icon"><img src="./images/icon-physics.png" alt=""></div>
+                                                    <div class="course-menu__name">Vật lý</div>
+                                                </a><a class="course-menu__lesson" href="#!">
+                                                    <div class="course-menu__icon"><img src="./images/icon-chemistry.png" alt=""></div>
+                                                    <div class="course-menu__name">Hoá học</div>
+                                                </a><a class="course-menu__lesson" href="#!">
+                                                    <div class="course-menu__icon"><img src="./images/icon-english.png" alt=""></div>
+                                                    <div class="course-menu__name">Tiếng anh</div>
+                                                </a><a class="course-menu__lesson" href="#!">
+                                                    <div class="course-menu__icon"><img src="./images/icon-literature.png" alt=""></div>
+                                                    <div class="course-menu__name">Ngữ văn</div>
+                                                </a><a class="course-menu__lesson" href="#!">
+                                                    <div class="course-menu__icon"><img src="./images/icon-biology.png" alt=""></div>
+                                                    <div class="course-menu__name">Sinh học</div>
+                                                </a><a class="course-menu__lesson" href="#!">
+                                                    <div class="course-menu__icon"><img src="./images/icon-history.png" alt=""></div>
+                                                    <div class="course-menu__name">Lịch sử</div>
+                                                </a><a class="course-menu__lesson" href="#!">
+                                                    <div class="course-menu__icon"><img src="./images/icon-geography.png" alt=""></div>
+                                                    <div class="course-menu__name">Địa lý</div>
+                                                </a><a class="course-menu__lesson" href="#!">
+                                                    <div class="course-menu__icon"><img src="./images/icon-technology.png" alt=""></div>
+                                                    <div class="course-menu__name">Công nghệ</div>
+                                                </a><a class="course-menu__lesson" href="#!">
+                                                    <div class="course-menu__icon"><img src="./images/icon-civic.png" alt=""></div>
+                                                    <div class="course-menu__name">Giáo dục công dân</div>
+                                                </a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="course-menu__item"><a class="course-menu__link" href="#!">Luyện thi vào lớp 6</a>
+                                    <div class="course-menu__mega">
+                                        <button class="course-menu__close" type="button"></button>
+                                        <div class="course-menu__mega-inner">
+                                            <div class="course-menu__grid"><a class="course-menu__lesson" href="#!">
+                                                    <div class="course-menu__icon"><img src="./images/icon-math.png" alt=""></div>
+                                                    <div class="course-menu__name">Toán học</div>
+                                                </a><a class="course-menu__lesson" href="#!">
+                                                    <div class="course-menu__icon"><img src="./images/icon-physics.png" alt=""></div>
+                                                    <div class="course-menu__name">Vật lý</div>
+                                                </a><a class="course-menu__lesson" href="#!">
+                                                    <div class="course-menu__icon"><img src="./images/icon-chemistry.png" alt=""></div>
+                                                    <div class="course-menu__name">Hoá học</div>
+                                                </a><a class="course-menu__lesson" href="#!">
+                                                    <div class="course-menu__icon"><img src="./images/icon-english.png" alt=""></div>
+                                                    <div class="course-menu__name">Tiếng anh</div>
+                                                </a><a class="course-menu__lesson" href="#!">
+                                                    <div class="course-menu__icon"><img src="./images/icon-literature.png" alt=""></div>
+                                                    <div class="course-menu__name">Ngữ văn</div>
+                                                </a><a class="course-menu__lesson" href="#!">
+                                                    <div class="course-menu__icon"><img src="./images/icon-biology.png" alt=""></div>
+                                                    <div class="course-menu__name">Sinh học</div>
+                                                </a><a class="course-menu__lesson" href="#!">
+                                                    <div class="course-menu__icon"><img src="./images/icon-history.png" alt=""></div>
+                                                    <div class="course-menu__name">Lịch sử</div>
+                                                </a><a class="course-menu__lesson" href="#!">
+                                                    <div class="course-menu__icon"><img src="./images/icon-geography.png" alt=""></div>
+                                                    <div class="course-menu__name">Địa lý</div>
+                                                </a><a class="course-menu__lesson" href="#!">
+                                                    <div class="course-menu__icon"><img src="./images/icon-technology.png" alt=""></div>
+                                                    <div class="course-menu__name">Công nghệ</div>
+                                                </a><a class="course-menu__lesson" href="#!">
+                                                    <div class="course-menu__icon"><img src="./images/icon-civic.png" alt=""></div>
+                                                    <div class="course-menu__name">Giáo dục công dân</div>
+                                                </a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="course-menu__item"><a class="course-menu__link" href="#!">Luyện thi vào lớp 10</a>
+                                    <div class="course-menu__mega">
+                                        <button class="course-menu__close" type="button"></button>
+                                        <div class="course-menu__mega-inner">
+                                            <div class="course-menu__grid"><a class="course-menu__lesson" href="#!">
+                                                    <div class="course-menu__icon"><img src="./images/icon-math.png" alt=""></div>
+                                                    <div class="course-menu__name">Toán học</div>
+                                                </a><a class="course-menu__lesson" href="#!">
+                                                    <div class="course-menu__icon"><img src="./images/icon-physics.png" alt=""></div>
+                                                    <div class="course-menu__name">Vật lý</div>
+                                                </a><a class="course-menu__lesson" href="#!">
+                                                    <div class="course-menu__icon"><img src="./images/icon-chemistry.png" alt=""></div>
+                                                    <div class="course-menu__name">Hoá học</div>
+                                                </a><a class="course-menu__lesson" href="#!">
+                                                    <div class="course-menu__icon"><img src="./images/icon-english.png" alt=""></div>
+                                                    <div class="course-menu__name">Tiếng anh</div>
+                                                </a><a class="course-menu__lesson" href="#!">
+                                                    <div class="course-menu__icon"><img src="./images/icon-literature.png" alt=""></div>
+                                                    <div class="course-menu__name">Ngữ văn</div>
+                                                </a><a class="course-menu__lesson" href="#!">
+                                                    <div class="course-menu__icon"><img src="./images/icon-biology.png" alt=""></div>
+                                                    <div class="course-menu__name">Sinh học</div>
+                                                </a><a class="course-menu__lesson" href="#!">
+                                                    <div class="course-menu__icon"><img src="./images/icon-history.png" alt=""></div>
+                                                    <div class="course-menu__name">Lịch sử</div>
+                                                </a><a class="course-menu__lesson" href="#!">
+                                                    <div class="course-menu__icon"><img src="./images/icon-geography.png" alt=""></div>
+                                                    <div class="course-menu__name">Địa lý</div>
+                                                </a><a class="course-menu__lesson" href="#!">
+                                                    <div class="course-menu__icon"><img src="./images/icon-technology.png" alt=""></div>
+                                                    <div class="course-menu__name">Công nghệ</div>
+                                                </a><a class="course-menu__lesson" href="#!">
+                                                    <div class="course-menu__icon"><img src="./images/icon-civic.png" alt=""></div>
+                                                    <div class="course-menu__name">Giáo dục công dân</div>
+                                                </a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="course-menu__item"><a class="course-menu__link" href="#!">Luyện thi đại học</a>
+                                    <div class="course-menu__mega">
+                                        <button class="course-menu__close" type="button"></button>
+                                        <div class="course-menu__mega-inner">
+                                            <div class="course-menu__grid"><a class="course-menu__lesson" href="#!">
+                                                    <div class="course-menu__icon"><img src="./images/icon-math.png" alt=""></div>
+                                                    <div class="course-menu__name">Toán học</div>
+                                                </a><a class="course-menu__lesson" href="#!">
+                                                    <div class="course-menu__icon"><img src="./images/icon-physics.png" alt=""></div>
+                                                    <div class="course-menu__name">Vật lý</div>
+                                                </a><a class="course-menu__lesson" href="#!">
+                                                    <div class="course-menu__icon"><img src="./images/icon-chemistry.png" alt=""></div>
+                                                    <div class="course-menu__name">Hoá học</div>
+                                                </a><a class="course-menu__lesson" href="#!">
+                                                    <div class="course-menu__icon"><img src="./images/icon-english.png" alt=""></div>
+                                                    <div class="course-menu__name">Tiếng anh</div>
+                                                </a><a class="course-menu__lesson" href="#!">
+                                                    <div class="course-menu__icon"><img src="./images/icon-literature.png" alt=""></div>
+                                                    <div class="course-menu__name">Ngữ văn</div>
+                                                </a><a class="course-menu__lesson" href="#!">
+                                                    <div class="course-menu__icon"><img src="./images/icon-biology.png" alt=""></div>
+                                                    <div class="course-menu__name">Sinh học</div>
+                                                </a><a class="course-menu__lesson" href="#!">
+                                                    <div class="course-menu__icon"><img src="./images/icon-history.png" alt=""></div>
+                                                    <div class="course-menu__name">Lịch sử</div>
+                                                </a><a class="course-menu__lesson" href="#!">
+                                                    <div class="course-menu__icon"><img src="./images/icon-geography.png" alt=""></div>
+                                                    <div class="course-menu__name">Địa lý</div>
+                                                </a><a class="course-menu__lesson" href="#!">
+                                                    <div class="course-menu__icon"><img src="./images/icon-technology.png" alt=""></div>
+                                                    <div class="course-menu__name">Công nghệ</div>
+                                                </a><a class="course-menu__lesson" href="#!">
+                                                    <div class="course-menu__icon"><img src="./images/icon-civic.png" alt=""></div>
+                                                    <div class="course-menu__name">Giáo dục công dân</div>
+                                                </a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="course-menu__item"><a class="course-menu__link" href="#!">Lớp 10 - Lớp 11 - Lớp 12</a>
+                                    <div class="course-menu__mega">
+                                        <button class="course-menu__close" type="button"></button>
+                                        <div class="course-menu__mega-inner">
+                                            <div class="course-menu__grid"><a class="course-menu__lesson" href="#!">
+                                                    <div class="course-menu__icon"><img src="./images/icon-math.png" alt=""></div>
+                                                    <div class="course-menu__name">Toán học</div>
+                                                </a><a class="course-menu__lesson" href="#!">
+                                                    <div class="course-menu__icon"><img src="./images/icon-physics.png" alt=""></div>
+                                                    <div class="course-menu__name">Vật lý</div>
+                                                </a><a class="course-menu__lesson" href="#!">
+                                                    <div class="course-menu__icon"><img src="./images/icon-chemistry.png" alt=""></div>
+                                                    <div class="course-menu__name">Hoá học</div>
+                                                </a><a class="course-menu__lesson" href="#!">
+                                                    <div class="course-menu__icon"><img src="./images/icon-english.png" alt=""></div>
+                                                    <div class="course-menu__name">Tiếng anh</div>
+                                                </a><a class="course-menu__lesson" href="#!">
+                                                    <div class="course-menu__icon"><img src="./images/icon-literature.png" alt=""></div>
+                                                    <div class="course-menu__name">Ngữ văn</div>
+                                                </a><a class="course-menu__lesson" href="#!">
+                                                    <div class="course-menu__icon"><img src="./images/icon-biology.png" alt=""></div>
+                                                    <div class="course-menu__name">Sinh học</div>
+                                                </a><a class="course-menu__lesson" href="#!">
+                                                    <div class="course-menu__icon"><img src="./images/icon-history.png" alt=""></div>
+                                                    <div class="course-menu__name">Lịch sử</div>
+                                                </a><a class="course-menu__lesson" href="#!">
+                                                    <div class="course-menu__icon"><img src="./images/icon-geography.png" alt=""></div>
+                                                    <div class="course-menu__name">Địa lý</div>
+                                                </a><a class="course-menu__lesson" href="#!">
+                                                    <div class="course-menu__icon"><img src="./images/icon-technology.png" alt=""></div>
+                                                    <div class="course-menu__name">Công nghệ</div>
+                                                </a><a class="course-menu__lesson" href="#!">
+                                                    <div class="course-menu__icon"><img src="./images/icon-civic.png" alt=""></div>
+                                                    <div class="course-menu__name">Giáo dục công dân</div>
+                                                </a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="course-menu__item"><a class="course-menu__link" href="#!">Lớp 6 - Lớp 7 - Lớp 8 - Lớp 9</a>
+                                    <div class="course-menu__mega">
+                                        <button class="course-menu__close" type="button"></button>
+                                        <div class="course-menu__mega-inner">
+                                            <div class="course-menu__grid"><a class="course-menu__lesson" href="#!">
+                                                    <div class="course-menu__icon"><img src="./images/icon-math.png" alt=""></div>
+                                                    <div class="course-menu__name">Toán học</div>
+                                                </a><a class="course-menu__lesson" href="#!">
+                                                    <div class="course-menu__icon"><img src="./images/icon-physics.png" alt=""></div>
+                                                    <div class="course-menu__name">Vật lý</div>
+                                                </a><a class="course-menu__lesson" href="#!">
+                                                    <div class="course-menu__icon"><img src="./images/icon-chemistry.png" alt=""></div>
+                                                    <div class="course-menu__name">Hoá học</div>
+                                                </a><a class="course-menu__lesson" href="#!">
+                                                    <div class="course-menu__icon"><img src="./images/icon-english.png" alt=""></div>
+                                                    <div class="course-menu__name">Tiếng anh</div>
+                                                </a><a class="course-menu__lesson" href="#!">
+                                                    <div class="course-menu__icon"><img src="./images/icon-literature.png" alt=""></div>
+                                                    <div class="course-menu__name">Ngữ văn</div>
+                                                </a><a class="course-menu__lesson" href="#!">
+                                                    <div class="course-menu__icon"><img src="./images/icon-biology.png" alt=""></div>
+                                                    <div class="course-menu__name">Sinh học</div>
+                                                </a><a class="course-menu__lesson" href="#!">
+                                                    <div class="course-menu__icon"><img src="./images/icon-history.png" alt=""></div>
+                                                    <div class="course-menu__name">Lịch sử</div>
+                                                </a><a class="course-menu__lesson" href="#!">
+                                                    <div class="course-menu__icon"><img src="./images/icon-geography.png" alt=""></div>
+                                                    <div class="course-menu__name">Địa lý</div>
+                                                </a><a class="course-menu__lesson" href="#!">
+                                                    <div class="course-menu__icon"><img src="./images/icon-technology.png" alt=""></div>
+                                                    <div class="course-menu__name">Công nghệ</div>
+                                                </a><a class="course-menu__lesson" href="#!">
+                                                    <div class="course-menu__icon"><img src="./images/icon-civic.png" alt=""></div>
+                                                    <div class="course-menu__name">Giáo dục công dân</div>
+                                                </a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="course-menu__item"><a class="course-menu__link" href="#!">Lớp 1 - Lớp 2 - Lớp 3 - Lớp 4 - Lớp 5</a>
+                                    <div class="course-menu__mega">
+                                        <button class="course-menu__close" type="button"></button>
+                                        <div class="course-menu__mega-inner">
+                                            <div class="course-menu__grid"><a class="course-menu__lesson" href="#!">
+                                                    <div class="course-menu__icon"><img src="./images/icon-math.png" alt=""></div>
+                                                    <div class="course-menu__name">Toán học</div>
+                                                </a><a class="course-menu__lesson" href="#!">
+                                                    <div class="course-menu__icon"><img src="./images/icon-physics.png" alt=""></div>
+                                                    <div class="course-menu__name">Vật lý</div>
+                                                </a><a class="course-menu__lesson" href="#!">
+                                                    <div class="course-menu__icon"><img src="./images/icon-chemistry.png" alt=""></div>
+                                                    <div class="course-menu__name">Hoá học</div>
+                                                </a><a class="course-menu__lesson" href="#!">
+                                                    <div class="course-menu__icon"><img src="./images/icon-english.png" alt=""></div>
+                                                    <div class="course-menu__name">Tiếng anh</div>
+                                                </a><a class="course-menu__lesson" href="#!">
+                                                    <div class="course-menu__icon"><img src="./images/icon-literature.png" alt=""></div>
+                                                    <div class="course-menu__name">Ngữ văn</div>
+                                                </a><a class="course-menu__lesson" href="#!">
+                                                    <div class="course-menu__icon"><img src="./images/icon-biology.png" alt=""></div>
+                                                    <div class="course-menu__name">Sinh học</div>
+                                                </a><a class="course-menu__lesson" href="#!">
+                                                    <div class="course-menu__icon"><img src="./images/icon-history.png" alt=""></div>
+                                                    <div class="course-menu__name">Lịch sử</div>
+                                                </a><a class="course-menu__lesson" href="#!">
+                                                    <div class="course-menu__icon"><img src="./images/icon-geography.png" alt=""></div>
+                                                    <div class="course-menu__name">Địa lý</div>
+                                                </a><a class="course-menu__lesson" href="#!">
+                                                    <div class="course-menu__icon"><img src="./images/icon-technology.png" alt=""></div>
+                                                    <div class="course-menu__name">Công nghệ</div>
+                                                </a><a class="course-menu__lesson" href="#!">
+                                                    <div class="course-menu__icon"><img src="./images/icon-civic.png" alt=""></div>
+                                                    <div class="course-menu__name">Giáo dục công dân</div>
+                                                </a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="course-menu__backdrop"></div>
+                            </nav>
+                        </div>
+                        <div class="banner-grid__col">
+                            <div class="banner-slider">
+                                <div class="banner-slider__prev"><i class="fa fa-angle-left"></i></div>
+                                <div class="banner-slider__next"><i class="fa fa-angle-right"></i></div>
+                                <div class="swiper-container banner-slider__container">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide"><a class="banner-slider__frame" href="#!"><img class="d-block w-100" src="./images/banner-home.jpg" alt="" /></a>
+                                        </div>
+                                        <div class="swiper-slide"><a class="banner-slider__frame" href="#!"><img class="d-block w-100" src="./images/banner-home.jpg" alt="" /></a>
+                                        </div>
+                                        <div class="swiper-slide"><a class="banner-slider__frame" href="#!"><img class="d-block w-100" src="./images/banner-home.jpg" alt="" /></a>
+                                        </div>
+                                        <div class="swiper-slide"><a class="banner-slider__frame" href="#!"><img class="d-block w-100" src="./images/banner-home.jpg" alt="" /></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="banner-grid__col"><a class="banner-grid__frame" href="#!"><img src="https://placeimg.qom.vn/672/472/any" alt="" /></a></div>
+                        <div class="banner-grid__col"><a class="banner-grid__frame" href="#!"><img src="https://placeimg.qom.vn/670/470/any" alt="" /></a></div>
+                        <div class="banner-grid__col"><a class="banner-grid__frame" href="#!"><img src="https://placeimg.qom.vn/639/439/any" alt="" /></a></div>
+                    </div>
+                    <!-- Intro-->
+                    <div class="intros">
+                        <div class="intros__item media">
+                            <div class="intros__icon"><img src="./images/icon-graduate-cap.png" alt=""></div>
+                            <div class="media-body">
+                                <div class="intros__label">100.000 học sinh</div>
+                                <div class="intros__desc">tại khắp các tỉnh thành trên cả nước</div>
+                            </div>
+                        </div>
+                        <div class="intros__item media">
+                            <div class="intros__icon"><img src="./images/icon-book.png" alt=""></div>
+                            <div class="media-body">
+                                <div class="intros__label">1.000 bài giảng</div>
+                                <div class="intros__desc">bởi các thầy cô tâm huyết và biên soạn</div>
+                            </div>
+                        </div>
+                        <div class="intros__item media">
+                            <div class="intros__icon"><img src="./images/icon-teacher.png" alt=""></div>
+                            <div class="media-body">
+                                <div class="intros__label">1.000 thầy cô</div>
+                                <div class="intros__desc">trẻ và nhiệt huyết trên cả nước</div>
+                            </div>
+                        </div>
+                        <div class="intros__item media">
+                            <div class="intros__icon"><img src="./images/icon-give.png" alt=""></div>
+                            <div class="media-body">
+                                <div class="intros__label">5.000 du học sinh</div>
+                                <div class="intros__desc">được đào tạo du học thành công</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Đề thi mới + Học sinh hoạt động nổi bật-->
+                    <div class="row">
+                        <div class="col-lg-8 mb-30">
+                            <section class="section">
+                                <div class="section__header">
+                                    <h2 class="section__title"><span>Đề thi mới</span></h2><a class="section__link" href="#!"><span>Xem tất cả</span><img src="./images/icon-angle-right.png" alt=""></a>
+                                </div>
+                                <div class="section__body">
+                                    <ul class="exams">
+                                        <li class="exams__item"><a class="exams__link" href="#!">1. Đề kiểm tra chương 1 - sự điện ly</a><span class="exams__label">New</span></li>
+                                        <li class="exams__item"><a class="exams__link" href="#!">2. Đề thi vào lớp 10 Chuyên hóa Chuyên Bắc Ninh 2019-2020</a><span class="exams__label">New</span></li>
+                                        <li class="exams__item"><a class="exams__link" href="#!">3. Đề thi HSG tỉnh hóa 9 Bắc Giang năm 2018-2019</a></li>
+                                        <li class="exams__item"><a class="exams__link" href="#!">4. Đề thi HSG lớp 9 môn Hóa học tỉnh Bình Thuận năm 2017-2018</a></li>
+                                        <li class="exams__item"><a class="exams__link" href="#!">5. Đề kiểm tra 1 tiết toán 12 (chương 1) , THCS - THPT Hòa Bình</a></li>
+                                        <li class="exams__item"><a class="exams__link" href="#!">6. Đề kiểm tra chương 1 - sự điện ly</a></li>
+                                        <li class="exams__item"><a class="exams__link" href="#!">7. Đề thi vào lớp 10 Chuyên hóa Chuyên Bắc Ninh 2019-2020</a></li>
+                                        <li class="exams__item"><a class="exams__link" href="#!">10. Đề kiểm tra 1 tiết toán 12 (chương 1) , THCS-THPT Hòa Bình</a><span class="exams__label">New</span></li>
+                                    </ul>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="col-lg-4 mb-30">
+                            <section class="section section--sm">
+                                <div class="section__header">
+                                    <h2 class="section__title"><span>HỌC SINH HOẠT ĐỘNG NỔI BẬT</span></h2>
+                                </div>
+                                <div class="section__body">
+                                    <div class="list">
+                                        <div class="list__item">
+                                            <div class="student media">
+                                                <div class="student__avatar"><img src="https://pavatar.qom.vn/623" alt="" />
+                                                </div>
+                                                <div class="media-body">
+                                                    <div class="student__name">1. Nguyễn Ngọc Huy</div>
+                                                    <div class="student__point">Điểm thi: 93đ</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list__item">
+                                            <div class="student media">
+                                                <div class="student__avatar"><img src="https://pavatar.qom.vn/646" alt="" />
+                                                </div>
+                                                <div class="media-body">
+                                                    <div class="student__name">2. Nguyễn Ngọc Huy</div>
+                                                    <div class="student__point">Điểm thi: 93đ</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list__item">
+                                            <div class="student media">
+                                                <div class="student__avatar"><img src="https://pavatar.qom.vn/610" alt="" />
+                                                </div>
+                                                <div class="media-body">
+                                                    <div class="student__name">3. Nguyễn Ngọc Huy</div>
+                                                    <div class="student__point">Điểm thi: 93đ</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list__item">
+                                            <div class="student media">
+                                                <div class="student__avatar"><img src="https://pavatar.qom.vn/634" alt="" />
+                                                </div>
+                                                <div class="media-body">
+                                                    <div class="student__name">4. Nguyễn Ngọc Huy</div>
+                                                    <div class="student__point">Điểm thi: 93đ</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list__item">
+                                            <div class="student media">
+                                                <div class="student__avatar"><img src="https://pavatar.qom.vn/687" alt="" />
+                                                </div>
+                                                <div class="media-body">
+                                                    <div class="student__name">5. Nguyễn Ngọc Huy</div>
+                                                    <div class="student__point">Điểm thi: 93đ</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                    <section class="section">
+                        <div class="section__header">
+                            <h2 class="section__title"><span>Top bài giảng được đánh giá cao</span></h2>
+                        </div>
+                        <div class="section__body">
+                            <div class="lesson-grid">
+                                <div class="lesson"><a class="lesson__frame" href="#!"><img src="./images/lesson-img.jpg" alt="" /></a>
+                                    <div class="lesson__body">
+                                        <h3 class="lesson__title"><a href="#!">Hoá học 10</a></h3>
+                                        <div class="lesson__info"><span>Thời lượng:</span><span>12 tuần</span></div>
+                                        <div class="lesson__info"><span>Giáo viên:</span><a href="#!">Thầy Mai Đình Lợi</a></div>
+                                    </div>
+                                </div>
+                                <div class="lesson"><a class="lesson__frame" href="#!"><img src="./images/lesson-img.jpg" alt="" /></a>
+                                    <div class="lesson__body">
+                                        <h3 class="lesson__title"><a href="#!">Hoá học 10</a></h3>
+                                        <div class="lesson__info"><span>Thời lượng:</span><span>12 tuần</span></div>
+                                        <div class="lesson__info"><span>Giáo viên:</span><a href="#!">Thầy Mai Đình Lợi</a></div>
+                                    </div>
+                                </div>
+                                <div class="lesson"><a class="lesson__frame" href="#!"><img src="./images/lesson-img.jpg" alt="" /></a>
+                                    <div class="lesson__body">
+                                        <h3 class="lesson__title"><a href="#!">Hoá học 10</a></h3>
+                                        <div class="lesson__info"><span>Thời lượng:</span><span>12 tuần</span></div>
+                                        <div class="lesson__info"><span>Giáo viên:</span><a href="#!">Thầy Mai Đình Lợi</a></div>
+                                    </div>
+                                </div>
+                                <div class="lesson"><a class="lesson__frame" href="#!"><img src="./images/lesson-img.jpg" alt="" /></a>
+                                    <div class="lesson__body">
+                                        <h3 class="lesson__title"><a href="#!">Hoá học 10</a></h3>
+                                        <div class="lesson__info"><span>Thời lượng:</span><span>12 tuần</span></div>
+                                        <div class="lesson__info"><span>Giáo viên:</span><a href="#!">Thầy Mai Đình Lợi</a></div>
+                                    </div>
+                                </div>
+                                <div class="lesson"><a class="lesson__frame" href="#!"><img src="./images/lesson-img-2.jpg" alt="" /></a>
+                                    <div class="lesson__body">
+                                        <h3 class="lesson__title"><a href="#!">Hoá học 10</a></h3>
+                                        <div class="lesson__info"><span>Thời lượng:</span><span>12 tuần</span></div>
+                                        <div class="lesson__info"><span>Giáo viên:</span><a href="#!">Thầy Mai Đình Lợi</a></div>
+                                    </div>
+                                </div>
+                                <div class="lesson"><a class="lesson__frame" href="#!"><img src="./images/lesson-img-2.jpg" alt="" /></a>
+                                    <div class="lesson__body">
+                                        <h3 class="lesson__title"><a href="#!">Hoá học 10</a></h3>
+                                        <div class="lesson__info"><span>Thời lượng:</span><span>12 tuần</span></div>
+                                        <div class="lesson__info"><span>Giáo viên:</span><a href="#!">Thầy Mai Đình Lợi</a></div>
+                                    </div>
+                                </div>
+                                <div class="lesson"><a class="lesson__frame" href="#!"><img src="./images/lesson-img-2.jpg" alt="" /></a>
+                                    <div class="lesson__body">
+                                        <h3 class="lesson__title"><a href="#!">Hoá học 10</a></h3>
+                                        <div class="lesson__info"><span>Thời lượng:</span><span>12 tuần</span></div>
+                                        <div class="lesson__info"><span>Giáo viên:</span><a href="#!">Thầy Mai Đình Lợi</a></div>
+                                    </div>
+                                </div>
+                                <div class="lesson"><a class="lesson__frame" href="#!"><img src="./images/lesson-img-2.jpg" alt="" /></a>
+                                    <div class="lesson__body">
+                                        <h3 class="lesson__title"><a href="#!">Hoá học 10</a></h3>
+                                        <div class="lesson__info"><span>Thời lượng:</span><span>12 tuần</span></div>
+                                        <div class="lesson__info"><span>Giáo viên:</span><a href="#!">Thầy Mai Đình Lợi</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="section">
+                        <div class="section__header">
+                            <h2 class="section__title"><span>Top bài giảng Dành cho khối THPT</span></h2>
+                        </div>
+                        <div class="section__body">
+                            <div class="lesson-grid">
+                                <div class="lesson"><a class="lesson__frame" href="#!"><img src="./images/lesson-img.jpg" alt="" /></a>
+                                    <div class="lesson__body">
+                                        <h3 class="lesson__title"><a href="#!">Hoá học 10</a></h3>
+                                        <div class="lesson__info"><span>Thời lượng:</span><span>12 tuần</span></div>
+                                        <div class="lesson__info"><span>Giáo viên:</span><a href="#!">Thầy Mai Đình Lợi</a></div>
+                                    </div>
+                                </div>
+                                <div class="lesson"><a class="lesson__frame" href="#!"><img src="./images/lesson-img.jpg" alt="" /></a>
+                                    <div class="lesson__body">
+                                        <h3 class="lesson__title"><a href="#!">Hoá học 10</a></h3>
+                                        <div class="lesson__info"><span>Thời lượng:</span><span>12 tuần</span></div>
+                                        <div class="lesson__info"><span>Giáo viên:</span><a href="#!">Thầy Mai Đình Lợi</a></div>
+                                    </div>
+                                </div>
+                                <div class="lesson"><a class="lesson__frame" href="#!"><img src="./images/lesson-img.jpg" alt="" /></a>
+                                    <div class="lesson__body">
+                                        <h3 class="lesson__title"><a href="#!">Hoá học 10</a></h3>
+                                        <div class="lesson__info"><span>Thời lượng:</span><span>12 tuần</span></div>
+                                        <div class="lesson__info"><span>Giáo viên:</span><a href="#!">Thầy Mai Đình Lợi</a></div>
+                                    </div>
+                                </div>
+                                <div class="lesson"><a class="lesson__frame" href="#!"><img src="./images/lesson-img.jpg" alt="" /></a>
+                                    <div class="lesson__body">
+                                        <h3 class="lesson__title"><a href="#!">Hoá học 10</a></h3>
+                                        <div class="lesson__info"><span>Thời lượng:</span><span>12 tuần</span></div>
+                                        <div class="lesson__info"><span>Giáo viên:</span><a href="#!">Thầy Mai Đình Lợi</a></div>
+                                    </div>
+                                </div>
+                                <div class="lesson"><a class="lesson__frame" href="#!"><img src="./images/lesson-img-2.jpg" alt="" /></a>
+                                    <div class="lesson__body">
+                                        <h3 class="lesson__title"><a href="#!">Hoá học 10</a></h3>
+                                        <div class="lesson__info"><span>Thời lượng:</span><span>12 tuần</span></div>
+                                        <div class="lesson__info"><span>Giáo viên:</span><a href="#!">Thầy Mai Đình Lợi</a></div>
+                                    </div>
+                                </div>
+                                <div class="lesson"><a class="lesson__frame" href="#!"><img src="./images/lesson-img-2.jpg" alt="" /></a>
+                                    <div class="lesson__body">
+                                        <h3 class="lesson__title"><a href="#!">Hoá học 10</a></h3>
+                                        <div class="lesson__info"><span>Thời lượng:</span><span>12 tuần</span></div>
+                                        <div class="lesson__info"><span>Giáo viên:</span><a href="#!">Thầy Mai Đình Lợi</a></div>
+                                    </div>
+                                </div>
+                                <div class="lesson"><a class="lesson__frame" href="#!"><img src="./images/lesson-img-2.jpg" alt="" /></a>
+                                    <div class="lesson__body">
+                                        <h3 class="lesson__title"><a href="#!">Hoá học 10</a></h3>
+                                        <div class="lesson__info"><span>Thời lượng:</span><span>12 tuần</span></div>
+                                        <div class="lesson__info"><span>Giáo viên:</span><a href="#!">Thầy Mai Đình Lợi</a></div>
+                                    </div>
+                                </div>
+                                <div class="lesson"><a class="lesson__frame" href="#!"><img src="./images/lesson-img-2.jpg" alt="" /></a>
+                                    <div class="lesson__body">
+                                        <h3 class="lesson__title"><a href="#!">Hoá học 10</a></h3>
+                                        <div class="lesson__info"><span>Thời lượng:</span><span>12 tuần</span></div>
+                                        <div class="lesson__info"><span>Giáo viên:</span><a href="#!">Thầy Mai Đình Lợi</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <div class="row">
+                        <div class="col-xl-4 col-md-6 mb-30">
+                            <section class="section section--sm">
+                                <div class="section__header">
+                                    <h2 class="section__title"><span>DU HỌC HÀN QUỐC</span></h2><a class="section__link" href="#!"><span>Xem tất cả</span><img src="./images/icon-angle-right.png" alt=""></a>
+                                </div>
+                                <div class="section__body">
+                                    <div class="list">
+                                        <div class="list__item">
+                                            <div class="news media"><a class="news__frame" href="./news-detail.html"><img src="https://placeimg.qom.vn/671/471/any" alt="" /></a>
+                                                <div class="media-body">
+                                                    <h3 class="news__title"><a href="./news-detail.html">How to Learn English Fast and Easy</a></h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list__item">
+                                            <div class="news media"><a class="news__frame" href="./news-detail.html"><img src="https://placeimg.qom.vn/666/466/any" alt="" /></a>
+                                                <div class="media-body">
+                                                    <h3 class="news__title"><a href="./news-detail.html">How to Learn English Fast and Easy</a></h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list__item">
+                                            <div class="news media"><a class="news__frame" href="./news-detail.html"><img src="https://placeimg.qom.vn/693/493/any" alt="" /></a>
+                                                <div class="media-body">
+                                                    <h3 class="news__title"><a href="./news-detail.html">How to Learn English Fast and Easy</a></h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list__item">
+                                            <div class="news media"><a class="news__frame" href="./news-detail.html"><img src="https://placeimg.qom.vn/627/427/any" alt="" /></a>
+                                                <div class="media-body">
+                                                    <h3 class="news__title"><a href="./news-detail.html">How to Learn English Fast and Easy</a></h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list__item">
+                                            <div class="news media"><a class="news__frame" href="./news-detail.html"><img src="https://placeimg.qom.vn/674/474/any" alt="" /></a>
+                                                <div class="media-body">
+                                                    <h3 class="news__title"><a href="./news-detail.html">How to Learn English Fast and Easy</a></h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="col-xl-4 col-md-6 mb-30">
+                            <section class="section section--sm">
+                                <div class="section__header">
+                                    <h2 class="section__title"><span>DU HỌC NHẬT BẢN</span></h2><a class="section__link" href="#!"><span>Xem tất cả</span><img src="./images/icon-angle-right.png" alt=""></a>
+                                </div>
+                                <div class="section__body">
+                                    <div class="list">
+                                        <div class="list__item">
+                                            <div class="news media"><a class="news__frame" href="./news-detail.html"><img src="https://placeimg.qom.vn/659/459/any" alt="" /></a>
+                                                <div class="media-body">
+                                                    <h3 class="news__title"><a href="./news-detail.html">How to Learn English Fast and Easy</a></h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list__item">
+                                            <div class="news media"><a class="news__frame" href="./news-detail.html"><img src="https://placeimg.qom.vn/666/466/any" alt="" /></a>
+                                                <div class="media-body">
+                                                    <h3 class="news__title"><a href="./news-detail.html">How to Learn English Fast and Easy</a></h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list__item">
+                                            <div class="news media"><a class="news__frame" href="./news-detail.html"><img src="https://placeimg.qom.vn/662/462/any" alt="" /></a>
+                                                <div class="media-body">
+                                                    <h3 class="news__title"><a href="./news-detail.html">How to Learn English Fast and Easy</a></h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list__item">
+                                            <div class="news media"><a class="news__frame" href="./news-detail.html"><img src="https://placeimg.qom.vn/681/481/any" alt="" /></a>
+                                                <div class="media-body">
+                                                    <h3 class="news__title"><a href="./news-detail.html">How to Learn English Fast and Easy</a></h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="list__item">
+                                            <div class="news media"><a class="news__frame" href="./news-detail.html"><img src="https://placeimg.qom.vn/676/476/any" alt="" /></a>
+                                                <div class="media-body">
+                                                    <h3 class="news__title"><a href="./news-detail.html">How to Learn English Fast and Easy</a></h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="col-xl-4 mb-30">
+                            <form class="apply">
+                                <h2 class="apply__title">ĐĂNG KÝ THAM GIA<br>CHƯƠNG TRÌNH XÉT DUYỆT HỌC BỔNG<br>DU HỌC NHẬT BẢN - HÀN QUỐC</h2>
+                                <div class="row gutter -all-16">
+                                    <div class="col-xl-12 col-md-6 form-group">
+                                        <input class="form-control" type="text" placeholder="Họ và tên">
+                                    </div>
+                                    <div class="col-xl-12 col-md-6 form-group">
+                                        <input class="form-control js-datepicker" type="text" placeholder="Ngày tháng năm sinh">
+                                    </div>
+                                    <div class="col-xl-12 col-md-6 form-group">
+                                        <input class="form-control" type="text" placeholder="Số điện thoại">
+                                    </div>
+                                    <div class="col-xl-12 col-md-6 form-group">
+                                        <input class="form-control" type="text" placeholder="Trường THPT">
+                                    </div>
+                                    <div class="col-xl-12 col-md-6 form-group">
+                                        <input class="form-control" type="text" placeholder="Tỉnh/Thành phố">
+                                    </div>
+                                    <div class="col-xl-12 col-md-6 form-group">
+                                        <button class="btn btn-block btn-secondary text-700" type="submit">Đăng ký ngay</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- footer-->
+            <footer class="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-3 col-md-6 mb-30"><a class="footer__logo" href="./index.html"><img src="./images/logo.png" alt="" /></a>
+                            <div class="footer__name">Công ty Cổ phần Hợp tác Đầu tư Giáo dục Quốc tế Tín Phát</div>
+                            <ul class="footer__nav">
+                                <li><a href="#!">Giới thiệu</a></li>
+                                <li><a href="#!">Về chúng tôi</a></li>
+                                <li><a href="#!">Điều khoản và sử dụng</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-xl-3 col-md-6 mb-30">
+                            <div class="footer__title">Chương trình học tiêu biểu</div>
+                            <ul class="f-menu">
+                                <li class="f-menu__item"><a class="f-menu__link" href="#!">Chương trình học lớp 12</a></li>
+                                <li class="f-menu__item"><a class="f-menu__link" href="#!">Chương trình học lớp 11</a></li>
+                                <li class="f-menu__item"><a class="f-menu__link" href="#!">Chương trình học lớp 10</a></li>
+                                <li class="f-menu__item"><a class="f-menu__link" href="#!">Chương trình học lớp 09</a></li>
+                                <li class="f-menu__item"><a class="f-menu__link" href="#!">Chương trình học lớp 08</a></li>
+                                <li class="f-menu__item"><a class="f-menu__link" href="#!">Chương trình học lớp 07</a></li>
+                                <li class="f-menu__item"><a class="f-menu__link" href="#!">Chương trình học lớp 06</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-xl-3 col-md-6 mb-30">
+                            <div class="footer__title">Thông tin liên hệ</div>
+                            <ul class="f-contact">
+                                <li class="f-contact__item"><img src="./images/icon-map-marker-o.png" alt="" />21 Lê Đức Thọ, Mỹ Đình 2, Nam Từ Liêm, Hà Nội</li>
+                                <li class="f-contact__item"><img src="./images/icon-phone-o.png" alt="" /><a href="tel:02422 388 999">02422 388 999</a></li>
+                                <li class="f-contact__item"><img src="./images/icon-phone-o.png" alt="" /><a href="tel:0899 563 888">0899 563 888</a></li>
+                                <li class="f-contact__item"><img src="./images/icon-envelope-o.png" alt="" /><a href="mailto:lienhe@tinphat.edu.vn">lienhe@tinphat.edu.vn</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-xl-3 col-md-6 mb-30">
+                            <div class="footer__title">Fanpage</div>
+                            <div class="fb-page" data-href="https://www.facebook.com/facebook" data-tabs="" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                                <blockquote class="fb-xfbml-parse-ignore" cite="https://www.facebook.com/facebook"><a href="https://www.facebook.com/facebook">Facebook</a></blockquote>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <!-- modals + sticky widgets-->
+        <button class="btn-movetop js-scroll-to" type="button" data-target="body"><i class="fa fa-arrow-up"></i></button>
+    </body>
+</html>

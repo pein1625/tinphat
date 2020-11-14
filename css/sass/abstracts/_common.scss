@@ -1,0 +1,24 @@
+.m-last-0:last-child {
+  margin: 0 !important;
+}
+
+.p-last-0:last-child {
+  padding: 0 !important;
+}
+
+.border-last-0:last-child {
+  border: 0 !important;
+}
+
+// For hidden h1 tag
+.hidden-text {
+  position: absolute;
+  clip: rect(1px 1px 1px 1px);
+  /* for Internet Explorer */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
