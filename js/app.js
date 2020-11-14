@@ -297,13 +297,21 @@ function addSwiper(selector, options = {}) {
 }
 
 $(function () {
-  addSwiper(".banner-slider", {
+  const bannerSlider = addSwiper(".banner-slider", {
+    init: false,
     navigation: true,
     loop: true,
     speed: 800,
+    slidesPerView: 1,
     autoplay: {
-      delay: 5000,
+      delay: 6000,
       disableOnInteraction: false
     }
-  });
+  })[0];
+
+  if (!bannerSlider) return;
+
+  setTimeout(function () {
+    bannerSlider.init();
+  }, 2000);
 });
